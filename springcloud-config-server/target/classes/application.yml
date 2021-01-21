@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://192.168.0.176:9000/luohuagui/demo.git
+          search-paths: /config-repo/
+          username: luohuagui
+          password: luohuagui
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
